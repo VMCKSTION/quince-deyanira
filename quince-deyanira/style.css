@@ -1,0 +1,205 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#fff5f8;
+color:#444;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(
+rgba(0,0,0,.35),
+rgba(0,0,0,.35)
+),
+url('assets/portada.jpg');
+
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.overlay{
+color:white;
+padding:20px;
+}
+
+.overlay h3{
+font-size:2rem;
+font-family:'Great Vibes',cursive;
+}
+
+.overlay h1{
+font-size:4rem;
+font-family:'Great Vibes',cursive;
+margin:20px 0;
+}
+
+.overlay p{
+max-width:600px;
+margin:auto;
+}
+
+.card{
+max-width:900px;
+margin:60px auto;
+padding:40px;
+background:white;
+border-radius:25px;
+box-shadow:0 10px 40px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.info{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin:30px 0;
+}
+
+.info div{
+background:#ffe6ef;
+padding:20px;
+border-radius:15px;
+min-width:180px;
+}
+
+#countdown{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.box{
+background:#ff6fa8;
+color:white;
+padding:20px;
+border-radius:15px;
+width:100px;
+}
+
+.box span{
+font-size:2rem;
+font-weight:bold;
+}
+
+.btn{
+display:inline-block;
+margin:15px;
+padding:15px 30px;
+border-radius:40px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:.3s;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.maps{
+background:#ff6fa8;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.footer{
+text-align:center;
+padding:60px 20px;
+background:#ffdbe9;
+}
+
+footer{text-align:center;padding:50px;font-size:1.2rem}
+.petal{
+position:fixed;
+top:-20px;
+font-size:20px;
+animation:fall linear forwards;
+pointer-events:none;
+}
+
+
+@media(max-width:768px){
+
+.overlay h1{
+font-size:2.5rem;
+}
+
+}
+.petal{
+    position: fixed;
+    top: -50px;
+    z-index: 9999;
+    pointer-events: none;
+    user-select: none;
+
+    animation-name: caerPetalo;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+    filter: drop-shadow(0 0 4px rgba(255,255,255,.6));
+}
+
+@keyframes caerPetalo {
+
+    0%{
+        transform:
+            translateX(0px)
+            translateY(0px)
+            rotate(0deg);
+
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    25%{
+        transform:
+            translateX(50px)
+            translateY(25vh)
+            rotate(90deg);
+    }
+
+    50%{
+        transform:
+            translateX(-40px)
+            translateY(50vh)
+            rotate(180deg);
+    }
+
+    75%{
+        transform:
+            translateX(35px)
+            translateY(75vh)
+            rotate(270deg);
+    }
+
+    100%{
+        transform:
+            translateX(-30px)
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity:0;
+    }
+}
